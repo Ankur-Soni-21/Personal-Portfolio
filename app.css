@@ -698,6 +698,10 @@ textarea {
         padding: 0.5rem;
     }
 
+    .skill button{
+        display: none;
+    }
+
     /* connect */
     .colorful-form {
         flex: 1;
