@@ -1,6 +1,9 @@
 :root {
     --dark-color: #5761bc;
     --light-color: #87e3fa;
+    --main-h1-time: 1s;
+    --main-p-time: 1.25s;
+    --main-p-delay: var(--main-h1-time);
 }
 
 body {
@@ -12,7 +15,25 @@ body {
     box-sizing: border-box;
     font-optical-sizing: auto;
     font-family: "M PLUS 1 Code", monospace;
+    scroll-behavior: smooth;
 }
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--dark-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--light-color);
+    border-radius: 10px;
+}   
+
+
+
 
 body>* {
     margin: 4% 10%;
@@ -111,6 +132,7 @@ h1 {
     align-items: center;
 }
 
+
 .main_img img {
     max-height: 25vw;
 }
@@ -122,6 +144,8 @@ h1 {
     line-height: 1.5;
 }
 
+
+
 .main_content button {
     max-width: fit-content;
     padding: 1rem 2rem;
@@ -130,6 +154,7 @@ h1 {
     font-size: small;
     font-weight: bold;
 }
+
 
 /* About */
 .about {
@@ -419,3 +444,5 @@ textarea {
     justify-content: flex-end;
     gap: 2rem;
 }
+
+
