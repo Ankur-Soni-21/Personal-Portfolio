@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ankur Soni is a passionate software engineer based in India. Explore his portfolio and projects here.">
+    <meta name="description"
+        content="Ankur Soni is a passionate software engineer based in India. Explore his portfolio and projects here.">
     <title>Ankur Soni &#183 Software Enginneer</title>
     <link rel="icon" href="assets/icon-code.png">
     <link rel="stylesheet" href="components/components.css">
@@ -40,9 +41,11 @@
             <div class="main_content">
                 <h1>I'm Ankur</h1>
                 <p>Always Curios, Always Questioning!</p>
-                <button class="ui-btn" onclick="window.scrollTo(0,10000)">
-                    <span>Let's Connect</span>
-                </button>
+                <a href="#" class="scroll-to-connect">
+                    <button class="ui-btn">
+                        <span>Let's Connect</span>
+                    </button>
+                </a>
             </div>
             <div class="main_img">
                 <img src="assets/mainImage2.jpg" alt="">
@@ -83,7 +86,7 @@
                 <div class="skill">
                     <i class="fa-solid fa-plus"></i>
                     <h1>React.js</h1>
-                    <button onclick="location.href='#connect-section'"> Contact </button>
+                    <a href="#" class="scroll-to-connect"><button> Contact </button></a>
                 </div>
                 <div class="skill">
                     <i class="fa-solid fa-plus"></i>
@@ -259,5 +262,19 @@
         </div>
     </div>
 </body>
+
+<script>
+    // Made an array of all the scroll buttons and added an event listener to each of them
+    const scrollButtons = document.getElementsByClassName('scroll-to-connect');
+    Array.from(scrollButtons).forEach(function (button) {
+        button.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent default behavior of anchor tag
+
+            const connectSection = document.getElementById('connect-section');
+            connectSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+    // We use the scrollIntoView() method on the connectSection element to smoothly scroll to it when the button is clicked. We pass an options object with the behavior property set to 'smooth' to enable smooth scrolling.
+</script>
 
 </html>
