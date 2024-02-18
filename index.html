@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="components/components.css">
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="animations/animations.css">
+
+    <!-- Prefetching is not improving any preformance if the images are being fetched again in the body section -->
+    <!-- Use these prefetch tags when we need to fetch resources that are critical or are present on another page 
+    then it will improve performace  -->
+
+    <!-- <link rel="prefetch" href="assets/icon-terminal.png">
+    <link rel="prefetch" href="assets/icon-code.png">
+    <link rel="prefetch" href="assets/mainImage2.jpg"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap" rel="stylesheet">
@@ -37,7 +45,6 @@
             </div>
             <div class="main_img">
                 <img src="assets/mainImage2.jpg" alt="">
-                <img src="complementaryImage.png" alt="">
             </div>
         </div>
     </div>
@@ -154,7 +161,8 @@
                     </div>
                     <div class="project">
                         <h1>Calculator</h1>
-                        <p>Desktop Calculator is a simple calculator application built using Electron, HTML, CSS, and JS.
+                        <p>Desktop Calculator is a simple calculator application built using Electron, HTML, CSS, and
+                            JS.
                             It has a Modern UI and all the functionalities of a basic calculator.
                         </p>
                         <div class="project_links">
